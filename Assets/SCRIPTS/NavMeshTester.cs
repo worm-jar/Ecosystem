@@ -11,7 +11,7 @@ public class NavMeshTester : MonoBehaviour
 
     private NavMeshAgent _agent;
 
-    private void Start()
+    public void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _agent.destination = Target.position;
