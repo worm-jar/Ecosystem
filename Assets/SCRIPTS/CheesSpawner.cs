@@ -24,7 +24,6 @@ public class Cheesespawner : MonoBehaviour
             // Ensure the cheese array is not empty
             if (cheese.Length == 0)
             {
-                Debug.LogError("The cheese array is empty! Please assign cheese prefabs.");
                 yield break; // Stop the coroutine if the array is empty
             }
 
