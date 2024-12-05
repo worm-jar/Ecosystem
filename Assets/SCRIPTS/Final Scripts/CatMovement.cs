@@ -20,20 +20,24 @@ public class CatMovement : MonoBehaviour
     public float _distance;
     [SerializeField] private bool _isChasing = false;
     public Transform _rat;
+    public Transform _cat;
+    public Transform _water;
     public float _hunger;
     public float _hungerMax;
     public float _thirst;
     public float _thirstMax;
-    private float _timer;
+    public bool _thirsty = false;
+    public float _reproduction;
+    public float _reproductionMax;
     public float _timerSet;
     public bool _timerStart;
+    public bool _breedable = false;
 
     private void Start()
     {
         _agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         _path = new NavMeshPath();
         _hunger = _hungerMax; _thirst = _thirstMax;
-        _timer = _timerSet;
         StartCoroutine(Randomize());
 
     }
@@ -41,16 +45,6 @@ public class CatMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_timer > 0 && _timerStart)
-        {
-            _timer -= Time.deltaTime;
-        }
-        else if (_timer <= 0)
-        {
-            StartCoroutine(Randomize());
-            _timerStart = false;
-            _timer = _timerSet;
-        }
         _hunger -= Time.deltaTime;
         _thirst -= Time.deltaTime;
         _hunger = Mathf.Clamp(_hunger, 0f, _hungerMax);
@@ -58,11 +52,41 @@ public class CatMovement : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Rat") && _hunger >= _thirst)
+        {
+            _isChasing = true;
+            _rat = other.transform;
+            _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
+        }
+        if (other.gameObject.CompareTag("Water") && _thirst > _hunger)
+        {
+            _thirsty = true;
+            _isChasing = true;
+            _water = other.transform;
+            _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
+        }
+        if (other.gameObject.CompareTag("Cat") && _reproduction > 40)
+        {
+            _breedable = true;
+            _cat = other.transform;
+            _target = new Vector3(_cat.transform.position.x, 0, _cat.transform.position.z);
+            StartCoroutine(Breed());
+        }
+    }
+    public void OnTriggerStay(Collider other)
+    {
         if (other.gameObject.CompareTag("Rat"))
         {
             _isChasing = true;
             _rat = other.transform;
             _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
+        }
+        if (other.gameObject.CompareTag("Cat") && _reproduction > 40)
+        {
+            _breedable = true;
+            _cat = other.transform;
+            _target = new Vector3(_cat.transform.position.x, 0, _cat.transform.position.z);
+            StartCoroutine(Breed());
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -73,7 +97,17 @@ public class CatMovement : MonoBehaviour
             Destroy(rat.gameObject);
             _hunger += 18f;
             _isChasing = false;
-            _timerStart = true;
+        }
+        if (collision.gameObject.CompareTag("Water") && _thirsty)
+        {
+            StartCoroutine(Drink());
+        }
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Rat"))
+        {
+            _isChasing = false;
         }
     }
     private IEnumerator Randomize()
@@ -81,7 +115,17 @@ public class CatMovement : MonoBehaviour
         while (_isChasing == false)
         {
             _agent.speed = 3.5f;
-            if (_agent.CalculatePath(_target, _path) && _path.status == NavMeshPathStatus.PathComplete)
+            if (_agent.CalculatePath(_target, _path) && _path.status == NavMeshPathStatus.PathComplete && _thirsty == false)
+            {
+                _direction = transform.forward;
+                _angle = (Random.Range(-_angle - _limitAngle, _angle + _limitAngle)%360);
+                Quaternion rotation = Quaternion.AngleAxis(_angle, Vector3.up);
+                _direction = rotation*_direction;
+                _target = transform.position + _direction * _distance;
+                _agent.destination = _target;
+                yield return new WaitForSeconds(_time);
+            }
+            if (_agent.CalculatePath(_target, _path) && _path.status == NavMeshPathStatus.PathComplete && _thirsty == true)
             {
                 _direction = transform.forward;
                 _angle = (Random.Range(-_angle - _limitAngle, _angle + _limitAngle)%360);
@@ -100,11 +144,24 @@ public class CatMovement : MonoBehaviour
                 yield return new WaitForSeconds(_time*3);
             }
         }
-        while ( _isChasing == true)
+        while (_isChasing == true)
         {
             _agent.speed = 7.5f;
             _agent.destination = _target;
-            yield return new WaitForSeconds(_time);
+            yield return new WaitForSeconds(_time/20);
         }
+            _agent.velocity = new Vector3(0, 0, 0);
+            _isChasing = false;
+            yield return new WaitForSeconds(_time);
+    }
+    public IEnumerator Breed()
+    {
+        _agent.destination = _target;
+        yield return new WaitForSeconds(_time);
+    }
+    public IEnumerator Drink()
+    {
+        _thirst = 30f;
+        yield return new WaitForSeconds(_time);
     }
 }
