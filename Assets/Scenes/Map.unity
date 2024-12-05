@@ -208,7 +208,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1780865893}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1 &34481502
 GameObject:
@@ -395,7 +399,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1590107120}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &142171175
 PrefabInstance:
@@ -1497,7 +1505,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 753090666}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1 &427616922
 GameObject:
@@ -1578,6 +1590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: real scale warehouse
       objectReference: {fileID: 0}
+    - target: {fileID: 5279940633341051166, guid: c4d4e8bd90f416c44a056c66d30b7f26,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 6477944805697763729, guid: c4d4e8bd90f416c44a056c66d30b7f26,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1631,7 +1648,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5279940633341051166, guid: c4d4e8bd90f416c44a056c66d30b7f26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 465331571}
+    - targetCorrespondingSourceObject: {fileID: 5279940633341051166, guid: c4d4e8bd90f416c44a056c66d30b7f26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 465331570}
+    - targetCorrespondingSourceObject: {fileID: 3366263341942104531, guid: c4d4e8bd90f416c44a056c66d30b7f26,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 424136626}
   m_SourcePrefab: {fileID: 100100000, guid: c4d4e8bd90f416c44a056c66d30b7f26, type: 3}
 --- !u!1001 &459999079
 PrefabInstance:
@@ -1916,6 +1945,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1939,7 +1973,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5105
+      value: 1.6913
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -1984,7 +2018,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1514460046}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1001 &533380046
 PrefabInstance:
@@ -2467,7 +2505,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2004633070}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1 &620868369
 GameObject:
@@ -2513,6 +2555,7 @@ GameObject:
   - component: {fileID: 636552100}
   - component: {fileID: 636552099}
   - component: {fileID: 636552098}
+  - component: {fileID: 636552101}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2587,8 +2630,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636552097}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.0026948045, y: 0.9887016, z: -0.08520612, w: -0.12329603}
+  m_LocalPosition: {x: -11.42, y: 9.32, z: -20.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3578,7 +3621,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1892759600}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &817064698
 PrefabInstance:
@@ -3666,7 +3713,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 868644539}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &817290863
 PrefabInstance:
@@ -4804,7 +4855,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 840678983}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1 &1048492021
 GameObject:
@@ -4958,7 +5013,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2040784148}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &1070180391
 PrefabInstance:
@@ -5908,6 +5967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5931,7 +5995,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5101
+      value: 1.6909001
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -5976,7 +6040,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119261010}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1 &1203219888
 GameObject:
@@ -6097,7 +6165,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 834752469}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &1216831478
 PrefabInstance:
@@ -6741,7 +6813,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 660471555}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &1316490319
 PrefabInstance:
@@ -6910,6 +6986,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6933,7 +7014,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5097
+      value: 1.6905
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -6978,7 +7059,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 775659209}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1001 &1367881757
 PrefabInstance:
@@ -7336,7 +7421,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1492350195}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1 &1440730130
 GameObject:
@@ -8188,7 +8277,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1773414891}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &1574369789
 PrefabInstance:
@@ -8487,6 +8580,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+        type: 3}
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     - target: {fileID: -7511558181221131132, guid: b4c6c6a82968ea04397d0acefb104de9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8502,6 +8600,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
+--- !u!1001 &1696016601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2895985294148404731, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_Name
+      value: Rat (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -22.285015
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1854057
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -34.389156
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8978642500023422209, guid: bb2c0b0f46af8334cb19fdcb5c6587c3,
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb2c0b0f46af8334cb19fdcb5c6587c3, type: 3}
 --- !u!1001 &1697315456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8514,6 +8675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: puddle (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -8538,7 +8704,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5095
+      value: 1.6903001
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -8583,7 +8749,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1200511656}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1001 &1699570059
 PrefabInstance:
@@ -8783,7 +8953,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b4c6c6a82968ea04397d0acefb104de9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 665732977}
   m_SourcePrefab: {fileID: 100100000, guid: b4c6c6a82968ea04397d0acefb104de9, type: 3}
 --- !u!1001 &1713263095
 PrefabInstance:
@@ -8989,6 +9163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9012,7 +9191,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5093
+      value: 1.6901001
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -9057,7 +9236,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 234729349}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1001 &1773774176
 PrefabInstance:
@@ -9421,6 +9604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9444,7 +9632,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5092
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -9489,7 +9677,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 975558351}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1001 &1854401905
 PrefabInstance:
@@ -9840,6 +10032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9863,7 +10060,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5096
+      value: 1.6904001
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -9908,7 +10105,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 328280419}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1 &2006819786
 GameObject:
@@ -9956,6 +10157,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9979,7 +10185,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.509
+      value: 1.6898
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -10024,7 +10230,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1242461730}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
 --- !u!1 &2016004063
 GameObject:
@@ -10493,6 +10703,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10516,7 +10731,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5095
+      value: 1.6903001
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
@@ -10561,8 +10776,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 398282081}
   m_SourcePrefab: {fileID: 100100000, guid: 68cd4368e4c36664c94288f2b134c009, type: 3}
+--- !u!1 &2119261009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+    type: 3}
+  m_PrefabInstance: {fileID: 1193352188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2119261010
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119261009}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.02, y: 0.0050000004, z: 0.02}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.002, y: 0, z: 0.004}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2127773987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10743,6 +10984,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: puddle
       objectReference: {fileID: 0}
+    - target: {fileID: 7099875238473463769, guid: 68cd4368e4c36664c94288f2b134c009,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
+      objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10766,7 +11012,7 @@ PrefabInstance:
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5092
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 7623470765555133795, guid: 68cd4368e4c36664c94288f2b134c009,
         type: 3}
