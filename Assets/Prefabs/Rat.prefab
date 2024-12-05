@@ -179,14 +179,21 @@ MonoBehaviour:
   _distance: 5
   _isChasing: 0
   _cheese: {fileID: 0}
+  _water: {fileID: 0}
+  _rat: {fileID: 0}
   _hunger: 0
   _hungerMax: 30
   _thirst: 0
   _thirstMax: 30
+  _reproduction: 0
+  _reproductionMax: 50
   _timerSet: 1
   _timerStart: 0
   _beingChased: 0
+  _breedable: 0
+  _thirsty: 0
   _cat: {fileID: 0}
+  _ratObject: {fileID: 0}
 --- !u!195 &322177943507177650
 NavMeshAgent:
   m_ObjectHideFlags: 0

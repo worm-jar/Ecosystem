@@ -7,6 +7,7 @@ TagManager:
   - Rat
   - Cat
   - Cheese
+  - Water
   layers:
   - Default
   - TransparentFX

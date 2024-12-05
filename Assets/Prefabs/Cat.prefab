@@ -174,12 +174,18 @@ MonoBehaviour:
   _distance: 5
   _isChasing: 0
   _rat: {fileID: 0}
+  _cat: {fileID: 0}
+  _water: {fileID: 0}
   _hunger: 0
   _hungerMax: 30
   _thirst: 0
   _thirstMax: 30
+  _thirsty: 0
+  _reproduction: 0
+  _reproductionMax: 0
   _timerSet: 1
   _timerStart: 0
+  _breedable: 0
 --- !u!54 &4399429032944234521
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -203,7 +209,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

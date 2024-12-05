@@ -71,7 +71,7 @@ public class MouseMovement : MonoBehaviour
             _cheese = other.transform;
             _target = new Vector3(_cheese.transform.position.x, 0, _cheese.transform.position.z);
         }
-        if (other.gameObject.CompareTag("Water") && _thirst > _hunger)
+        if (other.gameObject.CompareTag("Water") && _thirst >= _hunger)
         {
             _thirsty = true;
             _isChasing = true;
@@ -192,6 +192,8 @@ public class MouseMovement : MonoBehaviour
     }
     public IEnumerator Breed()
     {
+        _breedable = false;
+        _reproduction = 0f;
         _agent.destination = _target;
         yield return new WaitForSeconds(_time);
     }
