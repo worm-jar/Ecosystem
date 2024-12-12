@@ -193,7 +193,7 @@ MonoBehaviour:
   _breedable: 0
   _thirsty: 0
   _cat: {fileID: 0}
-  _ratObject: {fileID: 0}
+  _ratObject: {fileID: 2895985294148404731}
 --- !u!195 &322177943507177650
 NavMeshAgent:
   m_ObjectHideFlags: 0
