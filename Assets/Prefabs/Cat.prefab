@@ -181,11 +181,12 @@ MonoBehaviour:
   _thirst: 0
   _thirstMax: 30
   _thirsty: 0
-  _reproduction: 0
-  _reproductionMax: 0
+  _reproduction: 37.63
+  _reproductionMax: 50
   _timerSet: 1
   _timerStart: 0
   _breedable: 0
+  _catObject: {fileID: 495288100623855118}
 --- !u!54 &4399429032944234521
 Rigidbody:
   m_ObjectHideFlags: 0
