@@ -79,6 +79,7 @@ public class CatMovement : MonoBehaviour
             _isChasing = true;
             _water = other.transform;
             _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
+            _agent.destination = _target;
         }
         if (other.gameObject.CompareTag("Cat") && _reproduction > 40)
         {
@@ -192,7 +193,7 @@ public class CatMovement : MonoBehaviour
     {
         _thirst = 30f;
         _isChasing = false;
+        _water = null;
         yield return new WaitForSeconds(_time);
-        StartCoroutine(Randomize());
     }
 }
