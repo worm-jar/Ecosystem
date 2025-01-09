@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8744884328739051641}
   - component: {fileID: 6742916698437937918}
   - component: {fileID: 1818073982556915497}
+  - component: {fileID: 3401693999950267789}
   m_Layer: 0
   m_Name: Water_Drunk
   m_TagString: Untagged
@@ -4830,3 +4831,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3401693999950267789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091076938735733046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3c3e60ef07d324a9b84d7b63e01c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
