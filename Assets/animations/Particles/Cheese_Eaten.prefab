@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2422421796889804295}
   - component: {fileID: 570105525549312267}
   - component: {fileID: 2795077724642457913}
+  - component: {fileID: -2563447169123273596}
   m_Layer: 0
   m_Name: Cheese_Eaten
   m_TagString: Untagged
@@ -4830,3 +4831,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-2563447169123273596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229109903549698178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc3c3e60ef07d324a9b84d7b63e01c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
