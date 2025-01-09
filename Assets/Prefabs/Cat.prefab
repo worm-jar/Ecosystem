@@ -181,7 +181,7 @@ MonoBehaviour:
   _thirst: 0
   _thirstMax: 30
   _thirsty: 0
-  _reproduction: 37.63
+  _reproduction: 0
   _reproductionMax: 50
   _timerSet: 1
   _timerStart: 0

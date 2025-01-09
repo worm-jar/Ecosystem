@@ -35,6 +35,7 @@ public class CatMovement : MonoBehaviour
     public GameObject _catObject;
     private bool _ratNull;
     private float _spawnTimer = 0.1f;
+    public bool _nothing = false;
 
     private void Start()
     {
@@ -63,20 +64,31 @@ public class CatMovement : MonoBehaviour
             _isChasing = false;
             StartCoroutine(Randomize());
         }
+        if (_hunger == 0 || _thirst == 0)
+        {
+            Destroy(this.gameObject);
+            if (_rat == null && _water == null && _cat == null && _nothing)
+            {
+                StartCoroutine(Randomize());
+                _nothing = false;
+            }
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Rat") && _hunger >= _thirst)
+        if (other.gameObject.CompareTag("Rat") && _hunger <= _thirst)
         {
             _ratNull = true;
             _isChasing = true;
+            _water = null;
             _rat = other.transform;
             _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
         }
-        if (other.gameObject.CompareTag("Water") && _thirst >= _hunger)
+        if (other.gameObject.CompareTag("Water") && _thirst <= _hunger)
         {
             _thirsty = true;
             _isChasing = true;
+            _rat = null;
             _water = other.transform;
             _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
             _agent.destination = _target;
@@ -84,25 +96,41 @@ public class CatMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Cat") && _reproduction > 40)
         {
             _breedable = true;
+            _water = null;
+            _rat = null;
             _cat = other.transform;
             _target = new Vector3(_cat.transform.position.x, 0, _cat.transform.position.z);
+            _agent.destination = _target;
             StartCoroutine(Breed());
         }
     }
     public void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Rat") == true)
+        if (other.gameObject.CompareTag("Rat") == true && _thirst >= _hunger)
         {
             _isChasing = true;
             _rat = other.transform;
+            _water = null;
             _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
         }
         if (other.gameObject.CompareTag("Cat") && _reproduction > 40)
         {
             _breedable = true;
+            _water = null;
+            _rat = null;
             _cat = other.transform;
             _target = new Vector3(_cat.transform.position.x, 0, _cat.transform.position.z);
+            _agent.destination = _target;
             StartCoroutine(Breed());
+        }
+        if (other.gameObject.CompareTag("Water") && _thirst <= _hunger)
+        {
+            _thirsty = true;
+            _isChasing = true;
+            _rat = null;
+            _water = other.transform;
+            _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
+            _agent.destination = _target;
         }
     }
     public void OnCollisionEnter(Collision collision)
@@ -124,6 +152,15 @@ public class CatMovement : MonoBehaviour
             StartCoroutine(Breed0());
         }
     }
+   //void OnTriggerExit(Collider other)
+   //{   
+   //     if ((other.gameObject.CompareTag("Rat")||other.gameObject.CompareTag("Cat") || other.gameObject.CompareTag("Water")) && _thirsty)
+   //     {
+   //         _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
+   //         _agent.destination = _target;
+   //     } 
+   // }
+
     private IEnumerator Randomize()
     {
         _ratNull = false;
@@ -168,6 +205,7 @@ public class CatMovement : MonoBehaviour
             _agent.velocity = new Vector3(0, 0, 0);
             _isChasing = false;
             yield return new WaitForSeconds(_time);
+        _nothing = true;
     }
     public IEnumerator Breed()
     {
@@ -186,14 +224,16 @@ public class CatMovement : MonoBehaviour
         {
             Instantiate(_catObject, this.transform.position, Quaternion.identity);
         }
-        yield return new WaitForSeconds(_time);
         StartCoroutine(Randomize());
+        yield return new WaitForSeconds(_time);
     }
     public IEnumerator Drink()
     {
+        _thirsty = false;
         _thirst = 30f;
         _isChasing = false;
         _water = null;
+        StartCoroutine(Randomize());
         yield return new WaitForSeconds(_time);
     }
 }

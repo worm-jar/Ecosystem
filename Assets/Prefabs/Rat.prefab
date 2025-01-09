@@ -137,7 +137,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &4548098978790139064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,6 +194,7 @@ MonoBehaviour:
   _thirsty: 0
   _cat: {fileID: 0}
   _ratObject: {fileID: 2895985294148404731}
+  _nothing: 0
 --- !u!195 &322177943507177650
 NavMeshAgent:
   m_ObjectHideFlags: 0

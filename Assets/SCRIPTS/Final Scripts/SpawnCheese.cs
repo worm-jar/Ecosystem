@@ -7,12 +7,13 @@ public class SpawnCheese : MonoBehaviour
     // Start is called before the first frame update
     public GameObject _cheese;
     public Vector3 _location;
+    public Transform _transform;
     public float _time;
     void Start()
     {
         StartCoroutine(Spawn());
     }
-    public void OnCollisionEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Water"))
         {
@@ -24,9 +25,9 @@ public class SpawnCheese : MonoBehaviour
     {
         while (true)
         {
-            float RandomX = Random.Range(-36f, 36f);
-            float RandomZ = Random.Range(-45f, 45f);
-            _location = new Vector3(RandomX, 0.5f, RandomZ);
+            float RandomX = Random.Range(_transform.position.x - 30f, _transform.position.x + 30f);
+            float RandomZ = Random.Range(_transform.position.z - 45f, _transform.position.z + 45f);
+            _location = new Vector3(RandomX, 4.5f, RandomZ);
             Instantiate(_cheese, _location, Quaternion.identity);
             yield return new WaitForSeconds(_time);
         }

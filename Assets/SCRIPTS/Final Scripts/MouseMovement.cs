@@ -31,7 +31,7 @@ public class MouseMovement : MonoBehaviour
     public Transform _cat;
     public GameObject _ratObject;
     Rigidbody _rb;
-    private bool _secondSpawn;
+    public bool _nothing = false;
 
     private void Start()
     {
@@ -47,7 +47,6 @@ public class MouseMovement : MonoBehaviour
     {
         _thirst = _thirstMax;
         _hunger = _hungerMax;
-        _secondSpawn = true;
     }
 
     // Update is called once per frame
@@ -69,18 +68,29 @@ public class MouseMovement : MonoBehaviour
         _hunger = Mathf.Clamp(_hunger, 0f, _hungerMax);
         _thirst = Mathf.Clamp(_thirst, 0f, _thirstMax);
         _reproduction = Mathf.Clamp(_reproduction, 0f, _reproductionMax);
+        if (_hunger == 0 || _thirst == 0)
+        {
+            Destroy(this.gameObject);
+        }
+        if (_rat == null && _water == null && _cheese == null && _nothing)
+        {
+            StartCoroutine(Randomize());
+            _nothing = false;
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Cheese") && _hunger >= _thirst)
+        if (other.gameObject.CompareTag("Cheese") && _hunger <= _thirst)
         {
             _isChasing = true;
+            _water = null;
             _cheese = other.transform;
             _target = new Vector3(_cheese.transform.position.x, 0, _cheese.transform.position.z);
         }
-        if (other.gameObject.CompareTag("Water") && _thirst >= _hunger)
+        if (other.gameObject.CompareTag("Water") && _thirst <= _hunger)
         {
             _thirsty = true;
+            _cheese = null;
             _isChasing = true;
             _water = other.transform;
             _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
@@ -88,8 +98,11 @@ public class MouseMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Rat") && _reproduction > 40)
         {
             _breedable = true;
+            _water = null;
+            _cheese = null;
             _rat = other.transform;
             _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
+            _agent.destination = _target;
             StartCoroutine(Breed());
         }
         else if (other.gameObject.CompareTag("Cat"))
@@ -108,7 +121,7 @@ public class MouseMovement : MonoBehaviour
             _target = new Vector3(transform.position.x - _cat.transform.position.x, 0, transform.position.z - _cat.transform.position.z);
             StartCoroutine(Randomize());
         }
-        if (other.gameObject.CompareTag("Cheese"))
+        if (other.gameObject.CompareTag("Cheese") && _hunger <= _thirst)
         {
             _isChasing = true;
             _cheese = other.transform;
@@ -117,15 +130,22 @@ public class MouseMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Rat") && _reproduction > 40)
         {
             _breedable = true;
+            _water = null;
+            _cheese = null;
             _rat = other.transform;
             _target = new Vector3(_rat.transform.position.x, 0, _rat.transform.position.z);
-            StartCoroutine(Randomize());
+            _agent.destination = _target;
             StartCoroutine(Breed());
 
         }
-        if (other.gameObject.CompareTag("Cat") && _secondSpawn)
+        if (other.gameObject.CompareTag("Water") && _thirst <= _hunger)
         {
-            Destroy(this);
+            _thirsty = true;
+            _cheese = null;
+            _isChasing = true;
+            _water = other.transform;
+            _target = new Vector3(_water.transform.position.x, 0, _water.transform.position.z);
+            _agent.destination = _target;
         }
     }
     public void OnTriggerExit(Collider other)
@@ -146,17 +166,11 @@ public class MouseMovement : MonoBehaviour
             _timerStart = true;
             StartCoroutine(Randomize());
         }
-        if (collision.gameObject.CompareTag("Rat") && _breedable)
-        {
-            Instantiate(_ratObject, this.transform.position, Quaternion.identity);
-            _reproduction = 0f;
-            _breedable = false;
-        }
         if (collision.gameObject.CompareTag("Water") && _thirsty)
         {
             StartCoroutine(Drink());
         }
-        if (collision.gameObject.CompareTag("Cat") && _breedable)
+        if (collision.gameObject.CompareTag("Rat") && _breedable)
         {
             StartCoroutine(Breed0());
         }
@@ -197,17 +211,19 @@ public class MouseMovement : MonoBehaviour
         }
        
         while (_isChasing == true && _beingChased == false)
-            {
+        {
             _agent.speed = 4f;
             _agent.destination = _target;
             yield return new WaitForSeconds(_time);
-            }
-            while (_beingChased == true)
-            {
+        }
+        while (_beingChased == true)
+        {
             _agent.speed = 4f;
             _agent.destination = _target;
             yield return new WaitForSeconds(_time);
-            }   
+        }
+        _nothing = true;
+        yield return new WaitForSeconds(_time);
     }
     public IEnumerator Breed()
     {
@@ -224,13 +240,16 @@ public class MouseMovement : MonoBehaviour
         {
             Instantiate(_ratObject, this.transform.position, Quaternion.identity);
         }
-            yield return new WaitForSeconds(_time);
         StartCoroutine(Randomize());
+        yield return new WaitForSeconds(_time);
     }
     public IEnumerator Drink()
     {
+        _thirsty = false;
         _thirst = 30f;
-        yield return new WaitForSeconds(_time);
+        _water = null;
+        _isChasing = false;
         StartCoroutine(Randomize());
+        yield return new WaitForSeconds(_time);
     }
 }
